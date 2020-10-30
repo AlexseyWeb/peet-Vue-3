@@ -8,6 +8,19 @@
             <div class="user-profile__follower-count">
                 <strong>Followers:</strong> {{ followers }}
             </div>
+            <form class="user-profile__create-list">
+              <label for="newList"><strong>New List</strong></label>
+              <textarea id="newList" rows="4"></textarea>
+            </form>
+
+            <div class="user-profile__create-list-type">
+              <label for="newListType"><strong>Type: </strong></label>
+              <select id="newTwoType">
+                <option :value="option.value" v-for="(option, index) in listTypes" :key="index">
+                  {{ option.name }}
+                </option>
+              </select>
+            </div>
         </div>
         <div class="user-profile__list-jobs">
             <ListItem
@@ -28,6 +41,10 @@ export default {
     components:{ ListItem },
      data(){
     return {
+      listTypes: [
+        {value: 'draft', name: 'Draft'},
+        {value: 'instance', name: 'Instance two'}
+      ],
       followers: 0,
       user: {
         id: 1,
@@ -100,7 +117,12 @@ export default {
 
 }
 
-
+.user-profile__create-list {
+  display:flex;
+  flex-direction: column;
+  border-top: 1px solid black;
+  padding-top: 20px;
+}
     
 h1 {
     margin: 0;
