@@ -10,16 +10,22 @@
             </div>
         </div>
         <div class="user-profile__list-jobs">
-            <div class="user-profile__job" v-for="job in user.listOfJobs" :key="job.id">
-                {{ job.job }}
-            </div>
+            <ListItem
+             v-for="list in user.listOfJobs" 
+             :key="list.id" 
+             :username="user.username" 
+             :list="list"
+             @favorite="toggleFavorite"/>
         </div>
     </div>
 </template>
 
 <script>
+import ListItem from './ListItem'
+
 export default {
     name: "UserProfile",
+    components:{ ListItem },
      data(){
     return {
       followers: 0,
@@ -53,6 +59,9 @@ export default {
   methods: {
     followUsers(){
       this.followers++;
+    },
+    toggleFavorite(id) {
+      console.log(`Favorite Tweet ${id}`);
     }
   },
 
@@ -77,20 +86,22 @@ export default {
     flex-direction: column;
     margin-right: 50px;
     padding: 20px;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.431);
     border-radius: 5px;
     border: 1px solid #DFE3E8;
 }
 
 .user-profile__admin-badge {
-    color: white;
+    color: rgb(129, 6, 88);
     border-radius: 5px;
-    background:rebeccapurple;
+    background:rgba(88, 25, 5, 0.424);
     font-weight: bold;
     margin: 0 auto;
 
 }
 
+
+    
 h1 {
     margin: 0;
 }
