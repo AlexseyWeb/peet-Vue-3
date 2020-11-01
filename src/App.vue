@@ -2,15 +2,17 @@
   <div id="app">
     <h1>Welcome to App</h1>
       <UserProfile/>
+      <Img/>
   </div>
 </template>
 
 <script>
 import UserProfile from './components/UserProfile'
+import Img from './components/Img'
 
 export default {
   name: 'App',
-  components: { UserProfile }
+  components: { UserProfile, Img}
 
 }
 </script>
