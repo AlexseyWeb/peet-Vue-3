@@ -18,15 +18,17 @@ export default {
 
 <style scoped>
     img{
-        width: 30%;
+        width: 20%;
         height: 30%;
         transition: all 4s ease-in;
         border-radius: 40px;
-        box-shadow: 6px 6px 6px 6px rgba(250, 248, 248, 0.774);
+        box-shadow: 6px 6px 6px rgba(161, 6, 6, 0.774);
+        padding-left: 30px;
         
     }
     img:hover{
-        transform: skewX(45deg);
+        transform: skew(45deg, 30deg);
+        transform: scaleZ(30deg);
         
     }
 </style>>
