@@ -23,7 +23,8 @@ export default {
         transition: all 4s ease-in;
         border-radius: 40px;
         box-shadow: 6px 6px 6px rgba(161, 6, 6, 0.774);
-        padding-left: 30px;
+        margin-left: 60px;
+        border: 4px solid rgba(161, 6, 6, 0.7);
         
     }
     img:hover{

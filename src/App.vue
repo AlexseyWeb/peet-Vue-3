@@ -29,6 +29,8 @@ export default {
   height: 100%;
 }
 
-
+h1 {
+  padding-top: 20px;
+}
 
 </style>
