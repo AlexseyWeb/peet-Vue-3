@@ -42,8 +42,8 @@ export default {
      data(){
     return {
       listTypes: [
-        {value: 'draft', name: 'Draft'},
-        {value: 'instance', name: 'Instance two'}
+        {value: 'open', name: 'Open '},
+        {value: 'edit', name: 'Editor'}
       ],
       followers: 0,
       user: {
@@ -93,8 +93,8 @@ export default {
 
 .user-profile{
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    width: 100%;
+    grid-template-columns: 1fr 2fr;
+    width: 50%;
     padding: 50px 5%;
 }
 
@@ -128,6 +128,12 @@ h1 {
     margin: 0;
 }
 
+user-profile__list-jobs {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+}
 
 
 </style>
