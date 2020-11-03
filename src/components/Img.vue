@@ -1,7 +1,7 @@
 <template>
 
   <div class="images" >
-     <img v-for="img in images" :src="img" :key="img.title"/>
+     <img v-for="img in images" :src="img" :key="img.title" loading="lazy"/>
   </div>
 
 </template>
@@ -53,11 +53,13 @@ export default {
         justify-content: center;
         align-items: center;
         
+        
+        
     }
     img:hover{
         transform: skew(35deg, 20deg);
         transform: scaleZ(3deg);
-        
+      transition: border 2.3s 0s ease;
     }
 
 </style>>
