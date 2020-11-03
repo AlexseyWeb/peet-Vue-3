@@ -1,24 +1,30 @@
 <template>
   <div id="app">
     <h1>Welcome to the photo gallery</h1>
+    <Nav>
+      <NavItem/>
+    </Nav>
       <imgCard/>
   </div>
 </template>
 
 <script>
 
-import imgCard from './components/Img'
+import imgCard from './components/Img';
+import Nav from './components/Navigation';
+import NavItem from './components/NavItem';
 
 export default {
   name: 'App',
-  components: {  imgCard},
+  components: { Nav, NavItem, imgCard},
  
 
 }
 </script>
 
-<style>
+<style scoped>
 #app {
+  
   font-family: 'ROBOTO', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

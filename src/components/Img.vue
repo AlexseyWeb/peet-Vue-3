@@ -45,7 +45,7 @@ export default {
         margin-top:40px;
         width: 20%;
         height: 30%;
-        transition: all 4s ease-in;
+        transition: all 2s ease-in;
         border-radius: 40px;
         box-shadow: 6px 6px 6px rgba(161, 6, 6, 0.774);
         margin-left: 60px;
