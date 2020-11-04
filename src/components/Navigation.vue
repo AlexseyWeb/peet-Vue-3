@@ -1,5 +1,6 @@
 <template>
-    <h1>{{ logotype}}{{show()}}</h1>
+    <h1 v-on:click="xLogoType">{{ logotype}}{{show()}}</h1>
+    <button v-on:click="addItemMenu">addItemMenu</button>
     <nav class="menu">
         <ul>
             <template v-for="list in lists" :key="list">
@@ -22,7 +23,7 @@ export default {
                firstName: 'Alexsey',
                 lastName:  'Gusakov'
            },
-           logotype: '',
+           logotype: 'Click Me',
            lists: ['Home', 'About', 'Services', 'Projects'],
        } 
     },
@@ -31,8 +32,13 @@ export default {
      
            show() {
                console.log(`all data on component ${JSON.stringify(this.username)} ${this.logotype} ${JSON.stringify(this.lists)}`);
-           }
-        
+           },
+            xLogoType() {
+                return this.logotype = 'Level up!';
+            },
+            addItemMenu(){
+                this.lists.push('WO!');
+            }
     }
 }
 </script>
@@ -50,11 +56,13 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 li {
     padding: 0;
@@ -73,5 +81,31 @@ li > a:hover{
     transition: color 1s ease-in;
 }
 
+button {
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	background-color:#fe1a00;
+	border-radius:22px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#070707;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+    outline: none;
+}
+button:hover {
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	background-color:#ce0100;
+}
+button:active {
+	position:relative;
+	top:1px;
+    
+}
 
 </style>
