@@ -1,7 +1,7 @@
 <template>
 
   <div class="images" >
-     <img v-for="img in images" :src="img" :key="img.title" loading="lazy"/>
+     <img v-for="(img, index) in images" :src="img" :key="img"  v-on:click="removeImg(index)" loading="lazy"/>
   </div>
 
 </template>
@@ -26,7 +26,11 @@ export default {
       } 
         
    },
-    
+    methods: {
+      removeImg(index){
+        this.images.splice(index, 1);
+      }
+    }
   
 }
 

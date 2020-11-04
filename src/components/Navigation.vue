@@ -13,6 +13,7 @@
                 </li>
             </template>
         </ul>
+        <button class="welcome" v-on:click="showWelcome('Hello my dear friend!')"> Welcome</button>
     </nav>
 </template>
 
@@ -36,6 +37,9 @@ export default {
      
            show() {
                console.log(`all data on component ${JSON.stringify(this.username)} ${this.logotype} ${JSON.stringify(this.lists)}`);
+           },
+           showWelcome(str){
+               alert(str);
            },
             xLogoType() {
                 return this.logotype = 'Level up!';
@@ -120,6 +124,10 @@ button:active {
 	position:relative;
 	top:1px;
     
+}
+
+.welcome {
+    margin-left: 40px;
 }
 
 </style>
