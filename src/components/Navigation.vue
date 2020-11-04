@@ -1,6 +1,10 @@
 <template>
     <h1 v-on:click="xLogoType">{{ logotype}}{{show()}}</h1>
     <button v-on:click="addItemMenu">addItemMenu</button>
+    <div class="user">
+        <p>{{username.firstName}} {{username.lastName}}</p>
+        <button v-on:click="changeUser">Change User</button>
+    </div>
     <nav class="menu">
         <ul>
             <template v-for="list in lists" :key="list">
@@ -38,6 +42,16 @@ export default {
             },
             addItemMenu(){
                 this.lists.push('WO!');
+            },
+            changeName(){
+                return this.username.firstName = 'Guest';
+            },
+            changeLastName(){
+                return this.username.lastName = 'Undefined';
+            },
+            changeUser(){
+                this.changeName();
+                this.changeLastName();
             }
     }
 }
@@ -78,7 +92,7 @@ li>a {
 }
 li > a:hover{
     color:white;
-    transition: color 1s ease-in;
+    transition: color .5s ease-in;
 }
 
 button {
