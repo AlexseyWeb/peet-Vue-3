@@ -1,10 +1,10 @@
 <template>
-    <h1>{{ logotype }}</h1>
+    <h1>{{ logotype}}{{show()}}</h1>
     <nav class="menu">
         <ul>
             <template v-for="list in lists" :key="list">
                 <li>
-                    <a href="#">{{list}}</a>
+                    <a href="#" :title="list">{{ list }}</a>
                 </li>
             </template>
         </ul>
@@ -18,9 +18,21 @@ export default {
     name: 'Navigator Menu',
     data () {
        return {
+           username: {
+               firstName: 'Alexsey',
+                lastName:  'Gusakov'
+           },
            logotype: '',
            lists: ['Home', 'About', 'Services', 'Projects'],
        } 
+    },
+
+    methods: {
+     
+           show() {
+               console.log(`all data on component ${JSON.stringify(this.username)} ${this.logotype} ${JSON.stringify(this.lists)}`);
+           }
+        
     }
 }
 </script>
