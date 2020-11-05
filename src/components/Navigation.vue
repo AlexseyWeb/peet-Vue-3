@@ -1,6 +1,6 @@
 <template>
-    <button v-on:click="addItemMenu">addItemMenu</button>
     <nav class="menu">
+        <button v-on:click="addItemMenu">addItemMenu</button>
         <ul>
             <template v-for="list in lists" :key="list">
                 <li>
@@ -19,8 +19,8 @@ export default {
     data () {
        return {
            username: {
-               firstName: 'Alexsey',
-                lastName:  'Gusakov'
+               firstName: '',
+                lastName:  ''
            },
            logotype: 'Click Me',
            lists: ['Home', 'About', 'Services', 'Projects'],

@@ -18,9 +18,6 @@ export default {
        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTfRHH3uwBsPV-Z5yPXWtc2EHWzgD7FrsjflQ&usqp=CAU',
        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQHsuzlmRErb-IgWk5Jo-37MAjQQbww2J7Xw&usqp=CAU',
        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ0ybMdc-AjM05QOZd1y_xlGuCceyJPnaZm6g&usqp=CAU',
-       'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSasFktSE91eckIqEnG5XDAeE61AC_xE-ENgw&usqp=CAU',
-       'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSiuIgsfiWIOUBEaLqnji7DohZIWLrXzzh2dA&usqp=CAU',
-       'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTDxhKKcVzSWx8FrpxcmMZQW2Zi24XYDYXntQ&usqp=CAU',
        
        ]
       } 

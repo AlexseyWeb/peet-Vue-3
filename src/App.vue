@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <h1>Welcome to the photo gallery</h1>
+    <h1>Welcome to the Peet Project</h1>
     <Menu>
     </Menu>
+    <FormMenu/>
     <Nav/>
       <imgCard/>
       <Cart/>
-      <FormMenu/>
+      
   </div>
 </template>
 

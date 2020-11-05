@@ -1,7 +1,12 @@
 <template>
     <div class="form">
-        <input  type="text" v-model="message" class="msg" placeholder="reactive add text in paragraph">
+        <input  type="text" v-model="message" v-on:keyup.enter="addItem" class="msg" placeholder="reactive in Vue add text in paragraph and  press key Enter">
         <p>{{message}}</p>
+        <ul>
+            <li class="list-on-input" v-for="(item, index) in items" :key="item.id" v-on:click="removeItem(index)">
+               {{index + 1 }} {{  item }}
+            </li>
+        </ul>
     </div>
      
 </template>
@@ -14,10 +19,19 @@ export default {
     name: 'FormMenu',
     data(){
         return {
-            message: ''
+            message: ' ',
+            items: ['Limon', 'Yellow'],
+        }
+    },
+
+    methods: {
+        addItem(){
+            this.items.push(this.message);
+        },
+        removeItem(index){
+            this.items.splice(index, 1);
         }
     }
-
     
 }
 
@@ -27,7 +41,6 @@ export default {
 
 <style scoped>
 .form {
-    margin-top: 50px;
     background: rgb(12, 12, 12);
     height: 400px;
     color: red;
@@ -59,5 +72,12 @@ input[type='text']::placeholder{
 input[type='text']:focus{
     border: none;
     outline: none;
+}
+
+.list-on-input {
+    font-size: 18px;
+}
+.list-on-input:hover{
+    text-decoration: line-through;
 }
 </style>
