@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <h1>Welcome to the photo gallery</h1>
+    <Menu/>
     <Nav/>
       <imgCard/>
+      <Cart/>
   </div>
 </template>
 
@@ -10,11 +12,13 @@
 
 import imgCard from './components/Img';
 import Nav from './components/Navigation';
+import Cart from './components/Cart';
+import Menu from './components/Menu';
 
 
 export default {
   name: 'App',
-  components: { Nav,  imgCard},
+  components: { Nav, Menu,  imgCard, Cart},
  
 
 }

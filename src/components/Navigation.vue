@@ -1,10 +1,5 @@
 <template>
-    <h1 v-on:click="xLogoType">{{ logotype}}{{show()}}</h1>
     <button v-on:click="addItemMenu">addItemMenu</button>
-    <div class="user">
-        <p>{{username.firstName}} {{username.lastName}}</p>
-        <button v-on:click="changeUser">Change User</button>
-    </div>
     <nav class="menu">
         <ul>
             <template v-for="list in lists" :key="list">
@@ -13,7 +8,6 @@
                 </li>
             </template>
         </ul>
-        <button class="welcome" v-on:click="showWelcome('Hello my dear friend!')"> Welcome</button>
     </nav>
 </template>
 
