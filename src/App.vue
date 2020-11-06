@@ -36,7 +36,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #f3f5f6;
-  background:rgba(0, 0, 0, 0.637);
+  background:#052635;
   width: 100%;
   height: 100%;
   

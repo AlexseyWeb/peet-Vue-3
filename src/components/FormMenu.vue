@@ -1,10 +1,9 @@
 <template>
     <div class="form">
         <input  type="text" v-model="message" v-on:keyup.enter="addItem" class="msg" placeholder="reactive in Vue add text in paragraph and  press key Enter">
-        <p>{{message}}</p>
         <ul>
             <li class="list-on-input" v-for="(item, index) in items" :key="item.id" v-on:click="removeItem(index)">
-               {{index + 1 }} {{  item }}
+              <input type="checkbox" v-model="checked" > {{index + 1 }} {{  item }}
             </li>
         </ul>
     </div>
@@ -19,6 +18,7 @@ export default {
     name: 'FormMenu',
     data(){
         return {
+            checked: true,
             message: ' ',
             items: ['Limon', 'Yellow'],
         }
@@ -65,6 +65,7 @@ input[type='text']{
 
 input[type='text']::placeholder{
     text-align: center;
+    color: white;
 }
 
 
