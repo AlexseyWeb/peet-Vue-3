@@ -1,6 +1,6 @@
 <template>
     <div class="second-menu">
-        <button class="gamburger" v-on:click="showMenu"><i class="fas fa-bars"></i></button>
+        <button class="gamburger"  v-on:click="showMenu"><i class="fas fa-bars"></i></button>
         <div class="menu-panel" v-show="!show">
             <ul class="list">
                 <template v-for="item in menuItem" :key="item">
@@ -23,6 +23,7 @@ export default {
     data(){
         return {
             show: true,
+            
             menuItem: ['Profile', 'Recomendations', 'Job'],
 
         }

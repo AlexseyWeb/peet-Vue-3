@@ -1,6 +1,6 @@
 <template>
     <nav class="menu">
-        <button v-on:click="addItemMenu">addItemMenu</button>
+        <button  v-bind:class="str" >addItemMenu</button>
         <ul>
             <template v-for="list in lists" :key="list">
                 <li>
@@ -22,6 +22,7 @@ export default {
                firstName: '',
                 lastName:  ''
            },
+           str: 'none',
            logotype: 'Click Me',
            lists: ['Home', 'About', 'Services', 'Projects'],
        } 
@@ -122,6 +123,10 @@ button:active {
 
 .welcome {
     margin-left: 40px;
+}
+
+.none{
+    display: none;
 }
 
 </style>

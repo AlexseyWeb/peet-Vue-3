@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>Welcome to the Peet Project</h1>
+    <button v-on:click.once="hello">Once event click</button>
     <Menu>
     </Menu>
     <FormMenu/>
@@ -23,7 +24,11 @@ import FormMenu from './components/FormMenu'
 export default {
   name: 'App',
   components: { Nav, Menu,  imgCard, Cart, FormMenu},
- 
+  methods: {
+    hello(){
+     alert('Hello and bye!');
+    }
+  }
 
 }
 </script>
