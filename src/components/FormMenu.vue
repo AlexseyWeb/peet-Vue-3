@@ -27,6 +27,7 @@ export default {
     methods: {
         addItem(){
             this.items.push(this.message);
+            this.message = '';
         },
         removeItem(index){
             this.items.splice(index, 1);
